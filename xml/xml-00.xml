@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dirrecion SYSTEM "xml-00.dtd">
+<dirrecion>
+    <nombrecompleto>
+        <nombre>Antonio</nombre>
+        <apellidos>Tejeda</apellidos>
+    </nombrecompleto>
+    <correo>antonio@gmail.com</correo>
+    <telefono>1234567890</telefono>
+    <cumple>
+        <dia>1</dia>
+        <mes>1</mes>
+        <anio>1</anio>
+    </cumple>
+</dirrecion>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT Programa (Instrucciones)>
+<!ELEMENT Instrucciones (Operacion, Si, Mientras, Repetir)+>
+<!ELEMENT Operacion (Accion, Parametros?)>
+<!ELEMENT Accion (#PCDATA)>
+<!ELEMENT Parametros (Parametro+)>
+<!ELEMENT Parametro (Nombre, Valor)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Valor (#PCDATA)>
+
+<!ELEMENT Si (Condicion, Entonces, SiNo?)>
+<!ELEMENT Condicion (Variable, Operador, Valor_Comparacion)>
+<!ELEMENT Variable (#PCDATA)>
+<!ELEMENT Operador (#PCDATA)>
+<!ELEMENT Valor_Comparacion (#PCDATA)>
+<!ELEMENT Entonces (Instrucciones)>
+<!ELEMENT SiNo (Instrucciones)>
+
+<!ELEMENT Mientras (Condicion, Instrucciones)>
+
+<!ELEMENT Repetir (Veces, Instrucciones)>
+<!ELEMENT Veces (#PCDATA)>

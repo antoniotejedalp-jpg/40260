@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Programa SYSTEM "gramatica.dtd">
+<Programa>
+    <Instrucciones>
+        <Operacion>
+            <Accion>abrir_puerta</Accion>
+        </Operacion>
+        
+        <Operacion>
+            <Accion>llenar agua</Accion>
+            <Parametros>
+                <Parametro>
+                    <Nombre>temperatura</Nombre>
+                    <Valor>40</Valor>
+                </Parametro>
+                <Parametro>
+                    <Nombre>nivel</Nombre>
+                    <Valor>alto</Valor>
+                </Parametro>
+            </Parametros>
+        </Operacion>
+        
+        <Operacion>
+            <Accion>agregar detergente</Accion>
+            <Parametros>
+                <Parametro>
+                    <Nombre>cantidad</Nombre>
+                    <Valor>50ml</Valor>
+                </Parametro>
+            </Parametros>
+        </Operacion>
+        
+        <Repetir>
+            <Veces>3</Veces>
+            <Instrucciones>
+                <Operacion>
+                    <Accion>girar tambor</Accion>
+                    <Parametros>
+                        <Parametro>
+                            <Nombre>revoluciones</Nombre>
+                            <Valor>800</Valor>
+                        </Parametro>
+                        <Parametro>
+                            <Nombre>duracion_segundos</Nombre>
+                            <Valor>30</Valor>
+                        </Parametro>
+                    </Parametros>
+                </Operacion>
+                
+                <Operacion>
+                    <Accion>detener tambor</Accion>
+                </Operacion>
+            </Instrucciones>
+        </Repetir>
+        
+        <Si>
+            <Condicion>
+                <Variable>turbidez agua</Variable>
+                <Operador>mayor que</Operador>
+                <Valor_Comparacion>50</Valor_Comparacion>
+            </Condicion>
+            <Entonces>
+                <Instrucciones>
+                    <Operacion>
+                        <Accion>vaciar agua</Accion>
+                    </Operacion>
+                    <Operacion>
+                        <Accion>llenar agua</Accion>
+                        <Parametros>
+                            <Parametro>
+                                <Nombre>temperatura</Nombre>
+                                <Valor>35</Valor>
+                            </Parametro>
+                            <Parametro>
+                                <Nombre>nivel</Nombre>
+                                <Valor>medio</Valor>
+                            </Parametro>
+                        </Parametros>
+                    </Operacion>
+                    <Repetir>
+                        <Veces>2</Veces>
+                        <Instrucciones>
+                            <Operacion>
+                                <Accion>girar tambor</Accion>
+                                <Parametros>
+                                    <Parametro>
+                                        <Nombre>revoluciones</Nombre>
+                                        <Valor>600</Valor>
+                                    </Parametro>
+                                    <Parametro>
+                                        <Nombre>duracion en segundos</Nombre>
+                                        <Valor>20</Valor>
+                                    </Parametro>
+                                </Parametros>
+                            </Operacion>
+                        </Instrucciones>
+                    </Repetir>
+                </Instrucciones>
+            </Entonces>
+            <SiNo>
+                <Instrucciones>
+                    <Operacion>
+                        <Accion>mensaje log</Accion>
+                        <Parametros>
+                            <Parametro>
+                                <Nombre>texto</Nombre>
+                                <Valor>Agua clara, enjuague no necesario</Valor>
+                            </Parametro>
+                        </Parametros>
+                    </Operacion>
+                </Instrucciones>
+            </SiNo>
+        </Si>
+        
+        <Mientras>
+            <Condicion>
+                <Variable>humedad de tambor</Variable>
+                <Operador>mayor que</Operador>
+                <Valor_Comparacion>30</Valor_Comparacion>
+            </Condicion>
+            <Instrucciones>
+                <Operacion>
+                    <Accion>centrifugar</Accion>
+                    <Parametros>
+                        <Parametro>
+                            <Nombre>revoluciones</Nombre>
+                            <Valor>1200</Valor>
+                        </Parametro>
+                        <Parametro>
+                            <Nombre>duracion en segundos</Nombre>
+                            <Valor>45</Valor>
+                        </Parametro>
+                    </Parametros>
+                </Operacion>
+            </Instrucciones>
+        </Mientras>
+        
+        <Operacion>
+            <Accion>vaciar agua</Accion>
+        </Operacion>
+        
+        <Operacion>
+            <Accion>abrir puerta</Accion>
+        </Operacion>
+        
+        <Operacion>
+            <Accion>reproducir sonido</Accion>
+            <Parametros>
+                <Parametro>
+                    <Nombre>tipo</Nombre>
+                    <Valor>finalizado</Valor>
+                </Parametro>
+            </Parametros>
+        </Operacion>
+    </Instrucciones>
+</Programa>
