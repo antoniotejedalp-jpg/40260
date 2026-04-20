@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!ELEMENT Programa (Instrucciones)>
-<!ELEMENT Instrucciones (Operacion, Si, Mientras, Repetir)+>
+<!ELEMENT Instrucciones (Operacion | Si | Mientras | Repetir)+>
 <!ELEMENT Operacion (Accion, Parametros?)>
 <!ELEMENT Accion (#PCDATA)>
 <!ELEMENT Parametros (Parametro+)>
